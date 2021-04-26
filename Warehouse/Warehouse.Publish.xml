@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/Logistics" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Test" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="Jmekubo" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bootstrap/fonts/glyphicons-halflings-regular.svg" publishTime="04/02/2016 16:19:57" />
+    <file relUrl="Default.aspx" publishTime="04/05/2016 15:36:25" />
+    <file relUrl="Contact.aspx" publishTime="04/09/2016 17:26:40" />
+    <file relUrl="font-awesome/css/font-awesome.min.css" publishTime="04/02/2016 16:20:34" />
+    <file relUrl="Reports/ViewDispatches.aspx" publishTime="04/14/2016 15:17:31" />
+    <file relUrl="Account/Web.config" publishTime="04/02/2016 21:33:53" />
+    <file relUrl="Reports/InventoryReport.aspx" publishTime="09/22/2016 17:48:14" />
+    <file relUrl="bin/System.Data.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="Images/2.jpg" publishTime="04/06/2016 15:45:17" />
+    <file relUrl="bin/System.Web.Services.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="Admin/Transporters/transporters.aspx" publishTime="04/14/2016 14:00:06" />
+    <file relUrl="Admin/Employees/employeemain.aspx" publishTime="04/14/2016 13:59:00" />
+    <file relUrl="Styles/Site.css" publishTime="04/11/2016 17:56:17" />
+    <file relUrl="bin/System.Data.DataSetExtensions.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="Transactions/Inventory/viewInventory.aspx" publishTime="04/09/2016 10:31:32" />
+    <file relUrl="Styles.css" publishTime="04/11/2016 17:59:10" />
+    <file relUrl="bin/System.Configuration.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="bin/System.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="bin/System.Web.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="font-awesome/fonts/fontawesome-webfont.svg" publishTime="04/02/2016 16:20:46" />
+    <file relUrl="bin/Reports/rptReceipts.cs" publishTime="09/23/2016 20:10:37" />
+    <file relUrl="Images/Warehse pics/warehse5.png" publishTime="04/02/2016 16:37:05" />
+    <file relUrl="Images/Warehse pics/warehse1.png" publishTime="04/02/2016 16:37:05" />
+    <file relUrl="Admin/FoodItems/searchItems.aspx" publishTime="04/09/2016 08:26:37" />
+    <file relUrl="Global.asax" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="Images/Bluex3.png" publishTime="02/22/2016 18:47:17" />
+    <file relUrl="Members/Web.Debug.config" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="App_Themes/Default.css" publishTime="01/31/2016 16:19:16" />
+    <file relUrl="Admin/Transporters/addTransporter.aspx" publishTime="04/07/2016 15:27:35" />
+    <file relUrl="bootstrap/css/bootstrap.min.css" publishTime="04/03/2016 11:48:08" />
+    <file relUrl="Admin/Employees/employees.aspx" publishTime="04/14/2016 13:56:28" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="04/07/2016 17:15:02" />
+    <file relUrl="Account/Register.aspx" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="05/12/2010 11:24:02" />
+    <file relUrl="bootstrap/js/bootstrap.min.js" publishTime="04/02/2016 16:20:14" />
+    <file relUrl="App_Themes/Images/cross_icon_normal.png" publishTime="01/31/2016 16:19:34" />
+    <file relUrl="App_Themes/Images/Stage_BG_btm.png" publishTime="01/31/2016 16:19:34" />
+    <file relUrl="bin/Reports/rptInventoryLevels.cs" publishTime="09/23/2016 20:10:37" />
+    <file relUrl="Transactions/Inventory/addInventory.aspx" publishTime="02/21/2016 20:41:28" />
+    <file relUrl="Transactions/Shipments/addShipment.aspx" publishTime="04/07/2016 17:50:12" />
+    <file relUrl="Members/Web.Release.config" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="bin/System.Web.Extensions.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="bin/Reports/rptLoss.cs" publishTime="09/23/2016 20:10:36" />
+    <file relUrl="Transactions/Dispatches/viewDispatches.aspx" publishTime="04/09/2016 10:29:05" />
+    <file relUrl="Transactions/Losses/Losses.aspx" publishTime="04/09/2016 10:54:24" />
+    <file relUrl="Transactions/Receipts/Receipts.aspx" publishTime="04/08/2016 07:20:11" />
+    <file relUrl="Reports/LossReport.aspx" publishTime="09/23/2016 20:01:13" />
+    <file relUrl="Admin/Transporters/searchTransporter.aspx" publishTime="04/09/2016 08:39:49" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="Reports/rptItemList.rpt" publishTime="09/23/2016 18:57:06" />
+    <file relUrl="Home.aspx" publishTime="04/03/2016 11:35:16" />
+    <file relUrl="bin/System.EnterpriseServices.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="bootstrap/css/bootstrap.css" publishTime="04/02/2016 16:19:43" />
+    <file relUrl="Reports/rptDispatch.rpt" publishTime="09/23/2016 19:09:00" />
+    <file relUrl="bin/Reports/rptItemList.rpt" publishTime="09/23/2016 18:57:06" />
+    <file relUrl="bin/System.Drawing.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="bin/Reports/rptLoss.rpt" publishTime="09/23/2016 20:07:29" />
+    <file relUrl="Admin/Users/UsersAndRoles.aspx" publishTime="04/14/2016 11:41:38" />
+    <file relUrl="Reports/rptLoss.rpt" publishTime="09/23/2016 20:07:29" />
+    <file relUrl="Transactions/Shipments/Shipments.aspx" publishTime="04/07/2016 13:40:33" />
+    <file relUrl="Reports/rptReceipts.rpt" publishTime="09/23/2016 20:07:42" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="bin/Warehouse.pdb" publishTime="09/23/2016 20:12:11" />
+    <file relUrl="bootstrap/js/bootstrap.js" publishTime="04/02/2016 16:20:14" />
+    <file relUrl="Images/Bluex1.png" publishTime="02/22/2016 18:47:17" />
+    <file relUrl="bin/System.Xml.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="Transactions/Dispatches/Dispatches.aspx" publishTime="04/11/2016 19:42:34" />
+    <file relUrl="Site.Master" publishTime="09/23/2016 20:19:26" />
+    <file relUrl="Transactions/Receipts/viewReceipts.aspx" publishTime="04/13/2016 07:18:33" />
+    <file relUrl="Account/PasswordRecovery.aspx" publishTime="04/09/2016 20:30:07" />
+    <file relUrl="Reports/ItemlistReport.aspx" publishTime="09/23/2016 17:06:59" />
+    <file relUrl="Transactions/Shipments/Manage Shipments.aspx" publishTime="04/14/2016 14:00:54" />
+    <file relUrl="Web.config" publishTime="09/23/2016 16:39:33" />
+    <file relUrl="Images/Whitex3.png" publishTime="02/22/2016 18:47:17" />
+    <file relUrl="Reports/Dispatch.aspx" publishTime="09/23/2016 19:00:19" />
+    <file relUrl="bin/Reports/rptDispatch.cs" publishTime="09/23/2016 20:10:38" />
+    <file relUrl="bin/Warehouse.dll" publishTime="09/23/2016 20:12:11" />
+    <file relUrl="Transactions/Losses/searchloss.aspx" publishTime="04/09/2016 11:20:48" />
+    <file relUrl="About.aspx" publishTime="04/03/2016 11:42:04" />
+    <file relUrl="Transactions/Inventory/Inventory.aspx" publishTime="03/03/2016 07:42:12" />
+    <file relUrl="Transporters/Trucks/Trucks.aspx" publishTime="03/31/2016 08:32:45" />
+    <file relUrl="Images/Warehse pics/warehse3.png" publishTime="04/02/2016 16:37:05" />
+    <file relUrl="App_Themes/Images/titlebar_bg.jpg" publishTime="01/31/2016 16:19:34" />
+    <file relUrl="Members/Register.aspx" publishTime="04/07/2016 17:14:59" />
+    <file relUrl="Reports/ReceiptReport.aspx" publishTime="09/23/2016 19:50:14" />
+    <file relUrl="Admin/Employees/addEmployee.aspx" publishTime="04/07/2016 14:28:22" />
+    <file relUrl="Images/Bluex2.png" publishTime="02/22/2016 18:47:17" />
+    <file relUrl="bin/System.Web.Entity.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="font-awesome/css/font-awesome.css" publishTime="04/02/2016 16:20:34" />
+    <file relUrl="index.html" publishTime="04/03/2016 11:47:41" />
+    <file relUrl="bin/Reports/rptDispatch.rpt" publishTime="09/23/2016 19:09:00" />
+    <file relUrl="bin/System.Web.DynamicData.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="bin/System.Web.ApplicationServices.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="Admin/Users/Users.aspx" publishTime="04/14/2016 11:28:23" />
+    <file relUrl="MessageBoxUserControl.ascx" publishTime="04/06/2016 16:03:36" />
+    <file relUrl="Admin/FoodItems/fooditem.aspx" publishTime="04/14/2016 13:59:16" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="12/18/2013 00:13:40" />
+    <file relUrl="bin/Reports/rptReceipts.rpt" publishTime="09/23/2016 20:07:42" />
+    <file relUrl="bin/Reports/rptItemList.cs" publishTime="09/23/2016 20:10:37" />
+    <file relUrl="Images/1.jpg" publishTime="04/06/2016 15:45:17" />
+    <file relUrl="Transporters/Trucks/addTruck.aspx" publishTime="03/26/2016 09:18:24" />
+    <file relUrl="Images/Warehse pics/warehseplumpy.png" publishTime="04/02/2016 16:37:05" />
+    <file relUrl="bin/MySql.Web.dll" publishTime="12/18/2013 00:13:42" />
+    <file relUrl="Admin/FoodItems/addFoodItem.aspx" publishTime="04/08/2016 07:09:03" />
+    <file relUrl="Images/Whitex2.gif" publishTime="02/22/2016 18:47:17" />
+    <file relUrl="Account/Login.aspx" publishTime="04/12/2016 16:04:11" />
+    <file relUrl="Reports/rptInventoryLevels.rpt" publishTime="09/23/2016 16:52:49" />
+    <file relUrl="Images/Warehse pics/warehe truck.png" publishTime="04/02/2016 16:37:05" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="01/31/2016 15:37:06" />
+    <file relUrl="Account/CreateUser.aspx" publishTime="04/07/2016 19:26:18" />
+    <file relUrl="bin/Reports/rptInventoryLevels.rpt" publishTime="09/23/2016 16:52:49" />
+    <file relUrl="bin/Microsoft.CSharp.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="Images/3.jpg" publishTime="04/06/2016 15:45:17" />
+    <file relUrl="Images/Whitex1.png" publishTime="02/22/2016 18:47:17" />
+    <file relUrl="Images/4.jpg" publishTime="04/06/2016 15:45:17" />
+    <file relUrl="Sendmail.aspx" publishTime="04/03/2016 07:09:48" />
+    <file relUrl="bin/MySql.Data.Entity.dll" publishTime="12/18/2013 00:13:44" />
+    <file relUrl="bin/System.Xml.Linq.dll" publishTime="03/19/2010 05:31:26" />
+    <file relUrl="js/jquery-1.10.2.min.js" publishTime="04/02/2016 16:21:38" />
+    <file relUrl="Styles/MessageBox.css" publishTime="04/06/2016 15:38:35" />
+  </publishProfile>
+  <publishProfile publishUrl="Http://188.121.44.212,1433/MsDeploy.axd" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="sylikdata.com/warehouse" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Profile1" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="Azizakochale" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcDMvCmPCxkaGHn1AgDYEjwAAAAACAAAAAAAQZgAAAAEAACAAAABmI3chLA7c/MxBY3rIUHbHTUApPMk28yDGZ+TBlSXHLgAAAAAOgAAAAAIAACAAAADOXP89iypCfATiM4YyHTHnjOvKLKp9PbJcn6EjLQvzPiAAAABG8fLDUi9+/hQbwq7X6/dSDlWmHbM4RlzOXZibaq1vsEAAAACXv8PRuoFl7iHYsWkZUekBPBjcahENuvSZU6CiDa5gbAJmw6taXqv4ApxOEjsLpChhjMONTNktpHtbyvbXaVwV" SelectedForPublish="False" />
+</publishData>

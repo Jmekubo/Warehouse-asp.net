@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="warehousedbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="warehousedbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aspnet_Membership" EntityType="warehousedbModel.aspnet_Membership" />
+    <EntitySet Name="aspnet_Users" EntityType="warehousedbModel.aspnet_Users" />
+    <EntitySet Name="dispatches" EntityType="warehousedbModel.dispatch" />
+    <EntitySet Name="employees" EntityType="warehousedbModel.employee" />
+    <EntitySet Name="inventories" EntityType="warehousedbModel.inventory" />
+    <EntitySet Name="items" EntityType="warehousedbModel.item" />
+    <EntitySet Name="losses" EntityType="warehousedbModel.loss" />
+    <EntitySet Name="receipts" EntityType="warehousedbModel.receipt" />
+    <EntitySet Name="shipments" EntityType="warehousedbModel.shipment" />
+    <EntitySet Name="transporters" EntityType="warehousedbModel.transporter" />
+    <AssociationSet Name="FK__aspnet_Me__UserI__00200768" Association="warehousedbModel.FK__aspnet_Me__UserI__00200768">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dispatches_employees" Association="warehousedbModel.FK_dispatches_employees">
+      <End Role="employees" EntitySet="employees" />
+      <End Role="dispatches" EntitySet="dispatches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dispatches_items" Association="warehousedbModel.FK_dispatches_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="dispatches" EntitySet="dispatches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dispatches_transporters" Association="warehousedbModel.FK_dispatches_transporters">
+      <End Role="transporters" EntitySet="transporters" />
+      <End Role="dispatches" EntitySet="dispatches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inventory_items" Association="warehousedbModel.FK_inventory_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="inventory" EntitySet="inventories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_items_items" Association="warehousedbModel.FK_items_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="items1" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_losses_items" Association="warehousedbModel.FK_losses_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="losses" EntitySet="losses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_receipts_items" Association="warehousedbModel.FK_receipts_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="receipts" EntitySet="receipts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transporters_transporters" Association="warehousedbModel.FK_transporters_transporters">
+      <End Role="transporters" EntitySet="transporters" />
+      <End Role="transporters1" EntitySet="transporters" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="warehousedbModel.FK__aspnet_Me__UserI__00200768" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="warehousedbModel.FK__aspnet_Me__UserI__00200768" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+  </EntityType>
+  <EntityType Name="dispatch">
+    <Key>
+      <PropertyRef Name="DispID" />
+    </Key>
+    <Property Name="DispID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WayBillNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TranspID" Type="Int32" Nullable="false" />
+    <Property Name="TransporterName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="empID" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="TruckReg" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Driversname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Destination" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DispatchDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="employee" Relationship="warehousedbModel.FK_dispatches_employees" FromRole="dispatches" ToRole="employees" />
+    <NavigationProperty Name="item" Relationship="warehousedbModel.FK_dispatches_items" FromRole="dispatches" ToRole="items" />
+    <NavigationProperty Name="transporter" Relationship="warehousedbModel.FK_dispatches_transporters" FromRole="dispatches" ToRole="transporters" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="empID" />
+    </Key>
+    <Property Name="empID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Department" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Designation" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="dispatches" Relationship="warehousedbModel.FK_dispatches_employees" FromRole="employees" ToRole="dispatches" />
+  </EntityType>
+  <EntityType Name="inventory">
+    <Key>
+      <PropertyRef Name="InvID" />
+    </Key>
+    <Property Name="InvID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="InventoryDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="item" Relationship="warehousedbModel.FK_inventory_items" FromRole="inventory" ToRole="items" />
+  </EntityType>
+  <EntityType Name="item">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Category" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Units" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="dispatches" Relationship="warehousedbModel.FK_dispatches_items" FromRole="items" ToRole="dispatches" />
+    <NavigationProperty Name="inventories" Relationship="warehousedbModel.FK_inventory_items" FromRole="items" ToRole="inventory" />
+    <NavigationProperty Name="items1" Relationship="warehousedbModel.FK_items_items" FromRole="items" ToRole="items1" />
+    <NavigationProperty Name="item1" Relationship="warehousedbModel.FK_items_items" FromRole="items1" ToRole="items" />
+    <NavigationProperty Name="losses" Relationship="warehousedbModel.FK_losses_items" FromRole="items" ToRole="losses" />
+    <NavigationProperty Name="receipts" Relationship="warehousedbModel.FK_receipts_items" FromRole="items" ToRole="receipts" />
+  </EntityType>
+  <EntityType Name="loss">
+    <Key>
+      <PropertyRef Name="LossID" />
+    </Key>
+    <Property Name="LossID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="LossType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="Reason" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LossDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="item" Relationship="warehousedbModel.FK_losses_items" FromRole="losses" ToRole="items" />
+  </EntityType>
+  <EntityType Name="receipt">
+    <Key>
+      <PropertyRef Name="RecptID" />
+    </Key>
+    <Property Name="RecptID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WayBillNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OriginLocation" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="empID" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Condition" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TruckReg" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Driversname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="item" Relationship="warehousedbModel.FK_receipts_items" FromRole="receipts" ToRole="items" />
+  </EntityType>
+  <EntityType Name="shipment">
+    <Key>
+      <PropertyRef Name="ShipID" />
+    </Key>
+    <Property Name="ShipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShipmentStartDate" Type="DateTime" Nullable="false" />
+    <Property Name="ShipmentEndDate" Type="DateTime" Nullable="false" />
+    <Property Name="TranspID" Type="Int32" Nullable="false" />
+    <Property Name="TransporterName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="LoadingPoint" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DestinationPoint" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="transporter">
+    <Key>
+      <PropertyRef Name="TranspID" />
+    </Key>
+    <Property Name="TranspID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransporterName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PostCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="dispatches" Relationship="warehousedbModel.FK_dispatches_transporters" FromRole="transporters" ToRole="dispatches" />
+    <NavigationProperty Name="transporters1" Relationship="warehousedbModel.FK_transporters_transporters" FromRole="transporters" ToRole="transporters1" />
+    <NavigationProperty Name="transporter1" Relationship="warehousedbModel.FK_transporters_transporters" FromRole="transporters1" ToRole="transporters" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__UserI__00200768">
+    <End Role="aspnet_Users" Type="warehousedbModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="warehousedbModel.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dispatches_employees">
+    <End Role="employees" Type="warehousedbModel.employee" Multiplicity="1" />
+    <End Role="dispatches" Type="warehousedbModel.dispatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employees">
+        <PropertyRef Name="empID" />
+      </Principal>
+      <Dependent Role="dispatches">
+        <PropertyRef Name="empID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dispatches_items">
+    <End Role="items" Type="warehousedbModel.item" Multiplicity="1" />
+    <End Role="dispatches" Type="warehousedbModel.dispatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="dispatches">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dispatches_transporters">
+    <End Role="transporters" Type="warehousedbModel.transporter" Multiplicity="1" />
+    <End Role="dispatches" Type="warehousedbModel.dispatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="transporters">
+        <PropertyRef Name="TranspID" />
+      </Principal>
+      <Dependent Role="dispatches">
+        <PropertyRef Name="TranspID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inventory_items">
+    <End Role="items" Type="warehousedbModel.item" Multiplicity="1" />
+    <End Role="inventory" Type="warehousedbModel.inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="inventory">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_items_items">
+    <End Role="items" Type="warehousedbModel.item" Multiplicity="1" />
+    <End Role="items1" Type="warehousedbModel.item" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="items1">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_losses_items">
+    <End Role="items" Type="warehousedbModel.item" Multiplicity="1" />
+    <End Role="losses" Type="warehousedbModel.loss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="losses">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_receipts_items">
+    <End Role="items" Type="warehousedbModel.item" Multiplicity="1" />
+    <End Role="receipts" Type="warehousedbModel.receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="receipts">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transporters_transporters">
+    <End Role="transporters" Type="warehousedbModel.transporter" Multiplicity="1" />
+    <End Role="transporters1" Type="warehousedbModel.transporter" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="transporters">
+        <PropertyRef Name="TranspID" />
+      </Principal>
+      <Dependent Role="transporters1">
+        <PropertyRef Name="TranspID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

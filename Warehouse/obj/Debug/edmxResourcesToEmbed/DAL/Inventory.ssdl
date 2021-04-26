@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="warehousedbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="warehousedbModelStoreContainer">
+    <EntitySet Name="aspnet_Membership" EntityType="warehousedbModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Users" EntityType="warehousedbModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="dispatches" EntityType="warehousedbModel.Store.dispatches" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="employees" EntityType="warehousedbModel.Store.employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="inventory" EntityType="warehousedbModel.Store.inventory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="items" EntityType="warehousedbModel.Store.items" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="losses" EntityType="warehousedbModel.Store.losses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="receipts" EntityType="warehousedbModel.Store.receipts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="shipments" EntityType="warehousedbModel.Store.shipments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="transporters" EntityType="warehousedbModel.Store.transporters" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__aspnet_Me__UserI__00200768" Association="warehousedbModel.Store.FK__aspnet_Me__UserI__00200768">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dispatches_employees" Association="warehousedbModel.Store.FK_dispatches_employees">
+      <End Role="employees" EntitySet="employees" />
+      <End Role="dispatches" EntitySet="dispatches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dispatches_items" Association="warehousedbModel.Store.FK_dispatches_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="dispatches" EntitySet="dispatches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dispatches_transporters" Association="warehousedbModel.Store.FK_dispatches_transporters">
+      <End Role="transporters" EntitySet="transporters" />
+      <End Role="dispatches" EntitySet="dispatches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inventory_items" Association="warehousedbModel.Store.FK_inventory_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="inventory" EntitySet="inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_items_items" Association="warehousedbModel.Store.FK_items_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="items1" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_losses_items" Association="warehousedbModel.Store.FK_losses_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="losses" EntitySet="losses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_receipts_items" Association="warehousedbModel.Store.FK_receipts_items">
+      <End Role="items" EntitySet="items" />
+      <End Role="receipts" EntitySet="receipts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transporters_transporters" Association="warehousedbModel.Store.FK_transporters_transporters">
+      <End Role="transporters" EntitySet="transporters" />
+      <End Role="transporters1" EntitySet="transporters" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dispatches">
+    <Key>
+      <PropertyRef Name="DispID" />
+    </Key>
+    <Property Name="DispID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WayBillNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TranspID" Type="int" Nullable="false" />
+    <Property Name="TransporterName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="empID" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="UnitPrice" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="TruckReg" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Driversname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Destination" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DispatchDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="employees">
+    <Key>
+      <PropertyRef Name="empID" />
+    </Key>
+    <Property Name="empID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Department" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="inventory">
+    <Key>
+      <PropertyRef Name="InvID" />
+    </Key>
+    <Property Name="InvID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="InventoryDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="items">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Category" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Units" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UnitPrice" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="losses">
+    <Key>
+      <PropertyRef Name="LossID" />
+    </Key>
+    <Property Name="LossID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="LossType" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Quantity" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="Reason" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LossDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="receipts">
+    <Key>
+      <PropertyRef Name="RecptID" />
+    </Key>
+    <Property Name="RecptID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WayBillNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="OriginLocation" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="empID" Type="int" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Condition" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="TruckReg" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Driversname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReceiptDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="shipments">
+    <Key>
+      <PropertyRef Name="ShipID" />
+    </Key>
+    <Property Name="ShipID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ShipmentStartDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ShipmentEndDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="TranspID" Type="int" Nullable="false" />
+    <Property Name="TransporterName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="LoadingPoint" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DestinationPoint" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="transporters">
+    <Key>
+      <PropertyRef Name="TranspID" />
+    </Key>
+    <Property Name="TranspID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransporterName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Country" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PostCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__UserI__00200768">
+    <End Role="aspnet_Users" Type="warehousedbModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="warehousedbModel.Store.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dispatches_employees">
+    <End Role="employees" Type="warehousedbModel.Store.employees" Multiplicity="1" />
+    <End Role="dispatches" Type="warehousedbModel.Store.dispatches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employees">
+        <PropertyRef Name="empID" />
+      </Principal>
+      <Dependent Role="dispatches">
+        <PropertyRef Name="empID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dispatches_items">
+    <End Role="items" Type="warehousedbModel.Store.items" Multiplicity="1" />
+    <End Role="dispatches" Type="warehousedbModel.Store.dispatches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="dispatches">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dispatches_transporters">
+    <End Role="transporters" Type="warehousedbModel.Store.transporters" Multiplicity="1" />
+    <End Role="dispatches" Type="warehousedbModel.Store.dispatches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="transporters">
+        <PropertyRef Name="TranspID" />
+      </Principal>
+      <Dependent Role="dispatches">
+        <PropertyRef Name="TranspID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inventory_items">
+    <End Role="items" Type="warehousedbModel.Store.items" Multiplicity="1" />
+    <End Role="inventory" Type="warehousedbModel.Store.inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="inventory">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_items_items">
+    <End Role="items" Type="warehousedbModel.Store.items" Multiplicity="1" />
+    <End Role="items1" Type="warehousedbModel.Store.items" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="items1">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_losses_items">
+    <End Role="items" Type="warehousedbModel.Store.items" Multiplicity="1" />
+    <End Role="losses" Type="warehousedbModel.Store.losses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="losses">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_receipts_items">
+    <End Role="items" Type="warehousedbModel.Store.items" Multiplicity="1" />
+    <End Role="receipts" Type="warehousedbModel.Store.receipts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="receipts">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transporters_transporters">
+    <End Role="transporters" Type="warehousedbModel.Store.transporters" Multiplicity="1" />
+    <End Role="transporters1" Type="warehousedbModel.Store.transporters" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="transporters">
+        <PropertyRef Name="TranspID" />
+      </Principal>
+      <Dependent Role="transporters1">
+        <PropertyRef Name="TranspID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

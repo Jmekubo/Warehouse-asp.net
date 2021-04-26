@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="warehousedbCon-Web.config Connection String" description="warehousedbCon Connection String used in web.config by the application to access the database." defaultvalue="Data Source=localhost;Initial Catalog=warehousedb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\John\ Mekubo\\documents\\visual\ studio\ 2010\\Projects\\Warehouse\\Warehouse\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='warehousedbCon']/@connectionString" />
+  </parameter>
+  <parameter name="SqlRoleManagerConnection-Web.config Connection String" description="SqlRoleManagerConnection Connection String used in web.config by the application to access the database." defaultvalue="Data Source=localhost;Initial Catalog=warehousedb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\John\ Mekubo\\documents\\visual\ studio\ 2010\\Projects\\Warehouse\\Warehouse\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SqlRoleManagerConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Warehouse.Properties.Settings.ClientwarehousedbConnectionString-Web.config Connection String" description="Warehouse.Properties.Settings.ClientwarehousedbConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=C:\Users\John Mekubo\documents\visual studio 2010\Projects\Warehouse\Warehouse\warehousedb.sdf;Max Database Size=2047" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\John\ Mekubo\\documents\\visual\ studio\ 2010\\Projects\\Warehouse\\Warehouse\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Warehouse.Properties.Settings.ClientwarehousedbConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="warehousedbEntities-Web.config Connection String" description="warehousedbEntities Connection String used in web.config by the application to access the database." defaultvalue="metadata=res://*/DAL.Inventory.csdl|res://*/DAL.Inventory.ssdl|res://*/DAL.Inventory.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=localhost;Initial Catalog=warehousedb;Integrated Security=True;MultipleActiveResultSets=True&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\John\ Mekubo\\documents\\visual\ studio\ 2010\\Projects\\Warehouse\\Warehouse\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='warehousedbEntities']/@connectionString" />
+  </parameter>
+</parameters>
